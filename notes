@@ -41,11 +41,17 @@ Git Hooks (Husky)
 - npx husky install = creates .husky
 - npx husky add .husky/pre-commit "yarn lint"
 - npx husky add .husky/pre-push "yarn build"
+- add prepare script "husky install"
 
 VS Code Config
-Directory Structure
-Storybook
-Creating a component template
-Using the component template
-Layouts
-Deployment
+
+- add linter to ensure commit messages are consistent
+- yarn add -D @commitlint/cli @commitlint/config-conventional
+- add commitlint.config.js file
+
+  Directory Structure
+  Storybook
+  Creating a component template
+  Using the component template
+  Layouts
+  Deployment
