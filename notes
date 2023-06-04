@@ -1,0 +1,51 @@
+1 Engine Locking
+
+- which version of node are we using
+- create .nvmrc
+  - lts/fermium = node 14
+- create .npmrc
+  - engine-strict=true
+- specify enigines inside package.json
+  "engines": {
+  "node": ">=14.0.0",
+  "yarn": ">=1.22.0",
+  "npm": "please-use-yarn"
+  },
+
+Git Setup
+
+- create remote repo
+- create access token
+
+ESLint
+
+- pre configured
+- add more config
+
+Prettier
+
+- yarn add -D prettier
+- add .prettierignore file
+- add .prettierrc file = config
+- add script
+
+Git Hooks (Husky)
+
+- script that runs on different stages of the git process to enforce code quality standards
+
+1. git add .
+2. git commit -m 'xxx'
+3. git push
+
+- yarn add -D husky
+- npx husky install = creates .husky
+- npx husky add .husky/pre-commit "yarn lint"
+- npx husky add .husky/pre-push "yarn build"
+
+VS Code Config
+Directory Structure
+Storybook
+Creating a component template
+Using the component template
+Layouts
+Deployment
