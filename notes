@@ -43,15 +43,36 @@ Git Hooks (Husky)
 - npx husky add .husky/pre-push "yarn build"
 - add prepare script "husky install"
 
-VS Code Config
+Linter
 
 - add linter to ensure commit messages are consistent
 - yarn add -D @commitlint/cli @commitlint/config-conventional
 - add commitlint.config.js file
+- enable the linter with husky
+- npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
 
-  Directory Structure
-  Storybook
-  Creating a component template
-  Using the component template
-  Layouts
-  Deployment
+VS Code Config
+
+- create folder .vscode with file settings.json
+  = project specific settings that overwrite the general
+- the file is also commited to github inside repo
+
+Debugger
+
+- add file launch.json inside the .vscode folder
+
+Environment variables
+
+- yarn add -D cross-env
+- set environment variables on the command line
+- inside package.json add new dev script
+- "dev:inspect": "cross-env NODE_OPTIONS='--inspect' next dev"
+- so we can inspect server side logs in the browser when we are in dev mode
+- go to chrome inspect chrome://inspect
+
+Directory Structure
+Storybook
+Creating a component template
+Using the component template
+Layouts
+Deployment
